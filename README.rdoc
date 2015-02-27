@@ -1,0 +1,19 @@
+= RailheadMultifetch
+
+RailheadMultifetch is a Ruby on Rails plugin that automatically loads multiple cached partials.
+
+== Installation
+
+Add to your Gemfile:
+
+  gem 'railhead_multifetch'
+
+== Usage
+
+Similar to multi_fetch_fragment gem:
+
+  = render @items, cache: true
+
+== License
+
+Copyright (c) 2015 Bence Nagy (bence.nagy@gmail.com), released under the MIT license.
