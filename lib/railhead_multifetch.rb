@@ -17,9 +17,9 @@ module RailheadMultifetch
       digest = ActionView::PartialDigestor.new(name: @template.virtual_path, finder: @view.lookup_context).digest
 
       @collection.each do |object|
-        item = @options[:cache].respond_to?(:call) ? @options[:cache].call(object) : object
-        key = @view.controller.fragment_cache_key([item, digest])
-        keymap[key] = item
+        key_base = @options[:cache].respond_to?(:call) ? @options[:cache].call(object) : object
+        key = @view.controller.fragment_cache_key([key_base, digest])
+        keymap[key] = object
       end
       mutable_keys = keymap.keys.map { |key| key.dup }
       cached_results = Rails.cache.read_multi(*mutable_keys)
