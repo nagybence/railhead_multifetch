@@ -10,7 +10,7 @@ module RailheadMultifetch
   end
 
   def render_collection_with_multifetch
-    if ActionController::Base.perform_caching && (@options[:cache].present? or @locals[:cache].present?)
+    if @view.controller.perform_caching and (@options[:cache].present? or @locals[:cache].present?)
       return nil if @collection.blank?
       results = []
       keymap = {}

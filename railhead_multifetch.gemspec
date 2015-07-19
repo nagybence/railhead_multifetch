@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "railhead_multifetch"
-  s.version  = "0.0.2"
-  s.date     = "2015-03-01"
+  s.version  = "0.0.3"
+  s.date     = "2015-07-19"
   s.summary  = "RailheadMultifetch is a Ruby on Rails plugin that automatically loads multiple cached partials."
   s.email    = "bence.nagy@gmail.com"
   s.homepage = "http://github.com/nagybence/railhead_multifetch"
